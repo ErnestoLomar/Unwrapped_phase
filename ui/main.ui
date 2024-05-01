@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1474</width>
+    <height>824</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #fff;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item row="1" column="0">
+       <widget class="QFrame" name="frame_herramientas">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>700</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #E0E0E0;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <property name="spacing">
+          <number>8</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);
+font: 10pt &quot;Verdana&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Configurar parámetros</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Imágenes cargadas:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="19" column="0">
+          <widget class="QPushButton" name="btn_exportar_imagen">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #FFD54F; /* Color de fondo */
+    border: 2px solid #FFD54F; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #000000; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #FFA000; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #000; /* Color del texto al pasar el mouse */
+}</string>
+           </property>
+           <property name="text">
+            <string>Descargar imagen</string>
+           </property>
+          </widget>
+         </item>
+         <item row="20" column="0">
+          <widget class="QPushButton" name="btn_exportar_txt">
+           <property name="styleSheet">
+            <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #FFD54F; /* Color de fondo */
+    border: 2px solid #FFD54F; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #000000; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #FFA000; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #000; /* Color del texto al pasar el mouse */
+}</string>
+           </property>
+           <property name="text">
+            <string>Exportar .txt</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLineEdit" name="lineEdit_DR">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>R1 - R3</string>
+           </property>
+           <property name="placeholderText">
+            <string>R1 - R3</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Cálculo de la fase diferencial:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLineEdit" name="lineEdit_ND">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>D2 - D4</string>
+           </property>
+           <property name="placeholderText">
+            <string>D2 - D4</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLineEdit" name="lineEdit_NR">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>R2 - R4</string>
+           </property>
+           <property name="placeholderText">
+            <string>R2 - R4</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0">
+          <widget class="QLineEdit" name="lineEdit_DD">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>D1 - D3</string>
+           </property>
+           <property name="placeholderText">
+            <string>D1 - D3</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>DD:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>ND:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>NR:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="15" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLineEdit" name="lineEdit_umbral_mayor">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_umbral_mayor">
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #F2AD55; /* Color de fondo */
+    border: 2px solid #DA7C04; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #000; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+             </property>
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Z</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_umbral_menor">
+             <property name="maximumSize">
+              <size>
+               <width>30</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #F2AD55; /* Color de fondo */
+    border: 2px solid #DA7C04; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #000; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+             </property>
+             <property name="text">
+              <string>&lt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_umbral_menor">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>DR:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="18" column="0">
+          <widget class="QPushButton" name="mostrar_grafico3D">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #FFD54F; /* Color de fondo */
+    border: 2px solid #FFD54F; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #000000; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #FFA000; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #000; /* Color del texto al pasar el mouse */
+}</string>
+           </property>
+           <property name="text">
+            <string>Mostrar gráfica 3D</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Cálculo de las diferencias de imágenes:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="0">
+          <widget class="QLineEdit" name="lineEdit_fase_dif">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>ND * DR - NR * DD, DD * DR + ND * NR</string>
+           </property>
+           <property name="placeholderText">
+            <string>ND * DR - NR * DD, DD * DR + ND * NR</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QListView" name="list_img">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* Estilo para el ListView */
+QListView {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para los elementos del ListView */
+QListView::item {
+    height: 25px; /* Altura de los elementos */
+}
+
+/* Estilo para los elementos del ListView al pasar el mouse */
+QListView::item:hover {
+    background-color: #D0D0D0; /* Color de fondo al pasar el mouse */
+	color: #000;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="btn_quitarimg">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #FFD54F; /* Color de fondo */
+    border: 2px solid #FFD54F; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #000000; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #FFA000; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #000; /* Color del texto al pasar el mouse */
+}</string>
+           </property>
+           <property name="text">
+            <string>Quitar imagen</string>
+           </property>
+          </widget>
+         </item>
+         <item row="14" column="0">
+          <widget class="QLabel" name="label_11">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Umbral</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QFrame" name="frame_trabajo">
+        <property name="minimumSize">
+         <size>
+          <width>1150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_10">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 10pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>v1.0.0</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1" colspan="2">
+          <widget class="QLabel" name="label_9">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 15pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Diseñado por Dra. Angeles Mtz. Rmz.</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="4">
+          <widget class="QFrame" name="frame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QLabel" name="img_graficos">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <item>
+                  <layout class="QVBoxLayout" name="layoutv"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="3" alignment="Qt::AlignVCenter">
+       <widget class="QFrame" name="frame_menu">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #001F3F;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="btn_cargar_img">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+    color: rgb(255, 255, 255);
+	background-color: #0D47A1;
+	font: 75 14pt &quot;Verdana&quot;;
+}	
+
+QPushButton:hover {
+    background-color: #0D3B76; /* Color de fondo al pasar el mouse */
+}	</string>
+             </property>
+             <property name="text">
+              <string>Cargar imagen</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_procesar_img">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+    color: rgb(255, 255, 255);
+	background-color: #0D47A1;
+	font: 75 14pt &quot;Verdana&quot;;
+}	
+
+QPushButton:hover {
+    background-color: #0D3B76; /* Color de fondo al pasar el mouse */
+}	</string>
+             </property>
+             <property name="text">
+              <string>Procesar imágenes</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_limpiar_area">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+    color: rgb(255, 255, 255);
+	background-color: #0D47A1;
+	font: 75 14pt &quot;Verdana&quot;;
+}	
+
+QPushButton:hover {
+    background-color: #0D3B76; /* Color de fondo al pasar el mouse */
+}	</string>
+             </property>
+             <property name="text">
+              <string>Limpiar área de trabajo</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
