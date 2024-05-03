@@ -1,5 +1,5 @@
-from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QDesktopWidget, QFileDialog, QDialog, QLabel, QVBoxLayout, QAbstractItemView, QMessageBox
+from PyQt5 import uic, QtCore
+from PyQt5.QtWidgets import QApplication, QMainWindow, QDesktopWidget, QFileDialog, QDialog, QLabel, QVBoxLayout, QAbstractItemView, QMessageBox, QProgressDialog
 from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtCore import QStringListModel
 import numpy as np
@@ -48,6 +48,7 @@ class Ventana(QMainWindow):
         self.setGeometry(0, 0, 800, 480)
         uic.loadUi("./ui/main.ui", self)
         self.btn_cargar_img.clicked.connect(self.abrir_explorador)
+        self.btn_exportar_txt.clicked.connect(self.exportar_coordenadas)
         self.mostrar_grafico3D.clicked.connect(self.mostrar_en_3d)
         self.btn_procesar_img.clicked.connect(self.fase_final)
         self.btn_limpiar_area.clicked.connect(self.limpiar_area_trabajo)
@@ -59,6 +60,53 @@ class Ventana(QMainWindow):
         # Deshabilitar la edición en el QListView
         self.list_img.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.visualizacion_3d_creada = False
+        self.operador_umbral_menor = '<'  # Inicialmente establecido en <=
+        self.operador_umbral_mayor = '>'  # Inicialmente establecido en >=
+        self.btn_umbral_menor.clicked.connect(self.set_operador_umbral_menor)
+        self.btn_umbral_mayor.clicked.connect(self.set_operador_umbral_mayor)
+        
+    def set_operador_umbral_menor(self):
+        if self.operador_umbral_menor == '<=':
+            self.operador_umbral_menor = '<'
+            self.btn_umbral_menor.setText('<')
+        else:
+            self.operador_umbral_menor = '<='
+            self.btn_umbral_menor.setText('<=')
+        self.set_button_style(self.btn_umbral_menor)
+
+    def set_operador_umbral_mayor(self):
+        if self.operador_umbral_mayor == '>=':
+            self.operador_umbral_mayor = '>'
+            self.btn_umbral_mayor.setText('<')
+        else:
+            self.operador_umbral_mayor = '>='
+            self.btn_umbral_mayor.setText('<=')
+        self.set_button_style(self.btn_umbral_mayor)
+        
+    def set_button_style(self, button):
+        # Establecer el estilo del botón según el operador actual
+        if button.text() == '<':
+            button.setStyleSheet("""
+                QPushButton {
+                    background-color: #F2AD55; /* Color de fondo */
+                    border: 2px solid #DA7C04; /* Borde */
+                    border-radius: 5px; /* Bordes redondeados */
+                    color: #000; /* Color del texto */
+                    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+                    font: 8pt "Verdana";
+                }
+            """)
+        else:
+            button.setStyleSheet("""
+                QPushButton {
+                    background-color: #F2DD55; /* Color de fondo */
+                    border: 2px solid #DA7C04; /* Borde */
+                    border-radius: 5px; /* Bordes redondeados */
+                    color: #000; /* Color del texto */
+                    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+                    font: 8pt "Verdana";
+                }
+            """)
         
     def previsualizar_imagen(self, index):
         # Obtener el índice de la imagen seleccionada
@@ -111,6 +159,10 @@ class Ventana(QMainWindow):
         self.list_img.setModel(modelo)
         
     def fase_final(self):
+        
+        if hasattr(self, 'figura_3d'):
+            del self.figura_3d
+        
         # Verificar si hay imágenes cargadas
         if not self.imagenes_cargadas:
             QMessageBox.information(self, "Información", "No hay imágenes cargadas.")
@@ -164,8 +216,8 @@ class Ventana(QMainWindow):
         
         try:
             # Evaluar las expresiones para obtener los valores
-            d_phi = np.arctan2(eval(expresiones_fase_dif[0]), eval(expresiones_fase_dif[1]))
-            d_phi2 = d_phi
+            self.d_phi = np.arctan2(eval(expresiones_fase_dif[0]), eval(expresiones_fase_dif[1]))
+            d_phi2 = self.d_phi
         except Exception as e:
             QMessageBox.information(self, "Error", f"Error al evaluar las expresiones: {e}")
             return
@@ -191,16 +243,36 @@ class Ventana(QMainWindow):
         
         # Actualizar la visualización 3D si ya existe una
         if self.visualizacion_3d_creada == True:
-            self.plotear_en_3d(d_phi)
+            self.plotear_en_3d(self.d_phi)
             self.mostrar_en_3d()
         else:
             # Guardar el gráfico 3D en una variable de instancia
-            self.figura_3d = self.plotear_en_3d(d_phi)
+            self.figura_3d = self.plotear_en_3d(self.d_phi)
             # No llamar a mostrar_en_3d() aquí, ya que se llamará después de actualizar la figura 3D
         
     def plotear_en_3d(self, d_phi):
         
-        print("El valor de d_phi es: ", d_phi)
+        #print("El valor de d_phi es: ", d_phi)
+        # Obtener los umbrales de los lineEdit
+        umbral_menor_text = self.lineEdit_umbral_menor.text()
+        umbral_mayor_text = self.lineEdit_umbral_mayor.text()
+        
+        # Determinar los valores predeterminados si no se ingresan valores en los lineEdit
+        if not umbral_menor_text:
+            umbral_menor = np.min(d_phi)
+            self.lineEdit_umbral_menor.setText(str(umbral_menor))  # Establecer el valor predeterminado en el lineEdit
+        else:
+            umbral_menor = float(umbral_menor_text)
+            
+        if not umbral_mayor_text:
+            umbral_mayor = np.max(d_phi)
+            self.lineEdit_umbral_mayor.setText(str(umbral_mayor))  # Establecer el valor predeterminado en el lineEdit
+        else:
+            umbral_mayor = float(umbral_mayor_text)
+            
+        # Establecer el cursor al principio del texto en los lineEdit
+        self.lineEdit_umbral_menor.setCursorPosition(0)
+        self.lineEdit_umbral_mayor.setCursorPosition(0)
         
         # Limpiar el gráfico 3D si ya existe
         if hasattr(self, 'figura_3d'):
@@ -217,8 +289,8 @@ class Ventana(QMainWindow):
         def1_image = Image.open(def1_path)
         def1_width, def1_height = def1_image.size
         
-        print("def1_width: ", def1_width)
-        print("def1_height: ", def1_height)
+        #print("def1_width: ", def1_width)
+        #print("def1_height: ", def1_height)
 
         # Establecer el tamaño de la gráfica 3D
         ax.set_xlim(0, def1_width)
@@ -227,11 +299,22 @@ class Ventana(QMainWindow):
         # Crear la malla para el gráfico
         x, y = np.meshgrid(np.arange(d_phi.shape[1]), np.arange(d_phi.shape[0]))
         
+        # Aplicar el umbral a la matriz d_phi
+        if self.operador_umbral_menor is not None and self.operador_umbral_mayor is not None:
+            d_phi_masked = np.ma.masked_where(
+                (eval(f'd_phi {self.operador_umbral_menor} umbral_menor')) |
+                (eval(f'd_phi {self.operador_umbral_mayor} umbral_mayor')), 
+                d_phi
+            )
+        else:
+            # Si no se ha establecido un operador, usar un umbral estándar
+            d_phi_masked = np.ma.masked_where((d_phi < umbral_menor) | (d_phi > umbral_mayor), d_phi)
+        
         # Limpiar el subplot 3D si ya tiene una superficie
         ax.clear()
         
         # Graficar la nueva superficie 3D
-        surf = ax.plot_surface(x, y, d_phi, cmap='viridis')
+        surf = ax.plot_surface(x, y, d_phi_masked, cmap='viridis')
         
         # Configurar título y etiquetas de los ejes
         ax.set_title('Visualización en 3D')
@@ -278,6 +361,7 @@ class Ventana(QMainWindow):
         # Limpiar la figura 3D si está cargada
         if hasattr(self, 'figura_3d'):
             plt.close(self.figura_3d)
+            del self.figura_3d 
             # Eliminar todos los widgets del layout
             for i in reversed(range(self.layoutv.count())):
                 widget = self.layoutv.itemAt(i).widget()
@@ -316,6 +400,53 @@ class Ventana(QMainWindow):
         # Eliminar imágenes temporales
         os.remove("imagen_2D.png")
         os.remove("imagen_3D.png")
+        
+    def exportar_coordenadas(self):
+        if hasattr(self, 'figura_3d') and hasattr(self.figura_3d, 'axes'):
+            # Obtener el subplot 3D
+            ax = self.figura_3d.axes[0]
+
+            # Obtener las dimensiones de la matriz de fase
+            n_rows, n_cols = self.d_phi.shape
+
+            # Crear un arreglo de coordenadas z usando la matriz de fase d_phi
+            z = self.d_phi.flatten()  # Aplanamos la matriz de fase
+
+            # Crear arreglos de coordenadas x e y
+            x, y = np.meshgrid(np.arange(n_cols), np.arange(n_rows))
+            x = x.flatten()  # Aplanamos las matrices x e y
+            y = y.flatten()
+
+            # Aplicar el umbral a la matriz d_phi
+            umbral_menor = float(self.lineEdit_umbral_menor.text())
+            umbral_mayor = float(self.lineEdit_umbral_mayor.text())
+            d_phi_masked = np.ma.masked_where(
+                (self.d_phi < umbral_menor) | (self.d_phi > umbral_mayor), 
+                self.d_phi
+            )
+
+            # Crear un archivo de texto para guardar las coordenadas con el umbral aplicado
+            ruta_guardar, _ = QFileDialog.getSaveFileName(self, "Guardar Coordenadas", "", "Archivos de texto (*.txt)")
+            if ruta_guardar:
+                # Mostrar ventana de progreso
+                progress = QProgressDialog("Exportando coordenadas...", None, 0, 100, self)
+                progress.setWindowModality(QtCore.Qt.WindowModal)
+                progress.setWindowTitle("Exportando...")
+                progress.show()
+
+                with open(ruta_guardar, 'w') as file:
+                    file.write("Coordenadas de la superficie 3D con umbral aplicado:\n")
+                    file.write("Coordenadas X, Y, Z:\n")
+                    for i in range(len(x)):
+                        if not np.ma.is_masked(d_phi_masked.flat[i]):
+                            file.write(f"{x[i]}, {y[i]}, {z[i]}\n")
+                        # Actualizar ventana de progreso
+                        progress.setValue(int(i * 100 / len(x)))
+
+                progress.setValue(100)  # Completa el progreso
+                QMessageBox.information(self, "Información", f"¡Coordenadas con umbral aplicado guardadas con éxito en: {ruta_guardar}")
+        else:
+            QMessageBox.warning(self, "Advertencia", "No hay gráfica 3D para exportar coordenadas.")
         
 if __name__ == '__main__':
     print("\x1b[1;32m"+"Iniciando...")

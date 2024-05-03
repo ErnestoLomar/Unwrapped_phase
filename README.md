@@ -12,6 +12,10 @@ Este proyecto consiste en una aplicación desarrollada en Python utilizando PyQt
 
 ## Línea cronológica
 
+- **v1.1.1:**
+  - Se añadió un umbral que puede ser ajustado para un rango específico de la coordenada Z.
+  - Se implementó un botón denominado "Exportar .txt" en la interfaz gráfica, el cual permite exportar las coordenadas X, Y, y Z.
+  - Se solucionó un error que impedía la actualización de la variable 'self.figura_3d', lo cual provocaba la superposición de los números en la gráfica 3D.
 - **v1.0.0:**
   - Primera versión estable del visualizador de imágenes y análisis 3D.
 
@@ -63,7 +67,7 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 
 ## Créditos
 
-Este proyecto fue desarrollado por [Ernesto Lomar](https://github.com/ErnestoLomar).
+Este proyecto fue desarrollado por [Ernesto Lomar](https://github.com/ErnestoLomar) y diseñado por Dra. Angeles Mtz. Rmz.
 
 ## Licencia
 
