@@ -12,6 +12,16 @@ Este proyecto consiste en una aplicación desarrollada en Python utilizando PyQt
 
 ## Línea cronológica
 
+- **v2.0.0:**
+  - Se añadió la función goldstein_unwrap al procesamiento.
+  - Se añadió la función phase_to_height al procesamiento.
+  - Se añadió la función takeda_phase_unwrap al procesamiento.
+  - Se remodelo la interfaz gráfica de una manera mas intuitiva.
+  - Ahora se pueden insertar las imágenes sin importar el nombre que tengan.
+  - Se puede arrastras la imagen a su cuadro correspondiente para una mejor practica.
+  - Se agregaron nuevos parámetros modificables por el usuario.
+  - Se modificó el orden del umbral.
+  - Se añadió la visualización de mas gráficos como "gradient of the wrapped phase, Laplacian of the gradient, 2D unwrapped phase using Fourier transform"
 - **v1.1.1:**
   - Se añadió un umbral que puede ser ajustado para un rango específico de la coordenada Z.
   - Se implementó un botón denominado "Exportar .txt" en la interfaz gráfica, el cual permite exportar las coordenadas X, Y, y Z.

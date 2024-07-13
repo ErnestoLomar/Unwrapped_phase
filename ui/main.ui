@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1474</width>
+    <width>1575</width>
     <height>824</height>
    </rect>
   </property>
@@ -115,59 +115,6 @@ font: 8pt &quot;Verdana&quot;;</string>
            </item>
           </layout>
          </item>
-         <item row="19" column="0">
-          <widget class="QPushButton" name="btn_exportar_imagen">
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">/* Estilo para botones de acción */
-QPushButton {
-    background-color: #FFD54F; /* Color de fondo */
-    border: 2px solid #FFD54F; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-    color: #000000; /* Color del texto */
-    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
-	font: 8pt &quot;Verdana&quot;;
-}
-
-/* Estilo para botones de acción al pasar el mouse */
-QPushButton:hover {
-    background-color: #FFA000; /* Color de fondo al pasar el mouse */
-    border: 2px solid #FFA000; /* Borde al pasar el mouse */
-    color: #000; /* Color del texto al pasar el mouse */
-}</string>
-           </property>
-           <property name="text">
-            <string>Descargar imagen</string>
-           </property>
-          </widget>
-         </item>
-         <item row="20" column="0">
-          <widget class="QPushButton" name="btn_exportar_txt">
-           <property name="styleSheet">
-            <string notr="true">/* Estilo para botones de acción */
-QPushButton {
-    background-color: #FFD54F; /* Color de fondo */
-    border: 2px solid #FFD54F; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-    color: #000000; /* Color del texto */
-    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
-	font: 8pt &quot;Verdana&quot;;
-}
-
-/* Estilo para botones de acción al pasar el mouse */
-QPushButton:hover {
-    background-color: #FFA000; /* Color de fondo al pasar el mouse */
-    border: 2px solid #FFA000; /* Borde al pasar el mouse */
-    color: #000; /* Color del texto al pasar el mouse */
-}</string>
-           </property>
-           <property name="text">
-            <string>Exportar .txt</string>
-           </property>
-          </widget>
-         </item>
          <item row="7" column="0">
           <widget class="QLineEdit" name="lineEdit_DR">
            <property name="minimumSize">
@@ -237,32 +184,6 @@ font: 8pt &quot;Verdana&quot;;</string>
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QLineEdit" name="lineEdit_NR">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QLineEdit {
-    background-color: #FFFFFF; /* Color de fondo */
-    border: 2px solid #CCCCCC; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 5px; /* Espaciado interno */
-    color: #000000; /* Color del texto */
-	font: 8pt &quot;Verdana&quot;;
-}</string>
-           </property>
-           <property name="text">
-            <string>R2 - R4</string>
-           </property>
-           <property name="placeholderText">
-            <string>R2 - R4</string>
-           </property>
-          </widget>
-         </item>
          <item row="11" column="0">
           <widget class="QLineEdit" name="lineEdit_DD">
            <property name="minimumSize">
@@ -286,6 +207,32 @@ font: 8pt &quot;Verdana&quot;;</string>
            </property>
            <property name="placeholderText">
             <string>D1 - D3</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLineEdit" name="lineEdit_NR">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>R2 - R4</string>
+           </property>
+           <property name="placeholderText">
+            <string>R2 - R4</string>
            </property>
           </widget>
          </item>
@@ -340,7 +287,7 @@ font: 8pt &quot;Verdana&quot;;</string>
            </property>
           </widget>
          </item>
-         <item row="15" column="0">
+         <item row="21" column="0">
           <layout class="QHBoxLayout" name="horizontalLayout_4">
            <item>
             <widget class="QLineEdit" name="lineEdit_umbral_mayor">
@@ -452,51 +399,6 @@ font: 8pt &quot;Verdana&quot;;</string>
            </property>
           </widget>
          </item>
-         <item row="18" column="0">
-          <widget class="QPushButton" name="mostrar_grafico3D">
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">/* Estilo para botones de acción */
-QPushButton {
-    background-color: #FFD54F; /* Color de fondo */
-    border: 2px solid #FFD54F; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-    color: #000000; /* Color del texto */
-    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
-	font: 8pt &quot;Verdana&quot;;
-}
-
-/* Estilo para botones de acción al pasar el mouse */
-QPushButton:hover {
-    background-color: #FFA000; /* Color de fondo al pasar el mouse */
-    border: 2px solid #FFA000; /* Borde al pasar el mouse */
-    color: #000; /* Color del texto al pasar el mouse */
-}</string>
-           </property>
-           <property name="text">
-            <string>Mostrar gráfica 3D</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_5">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(0, 0, 0);
-font: 8pt &quot;Verdana&quot;;</string>
-           </property>
-           <property name="text">
-            <string>Cálculo de las diferencias de imágenes:</string>
-           </property>
-          </widget>
-         </item>
          <item row="13" column="0">
           <widget class="QLineEdit" name="lineEdit_fase_dif">
            <property name="minimumSize">
@@ -523,12 +425,69 @@ font: 8pt &quot;Verdana&quot;;</string>
            </property>
           </widget>
          </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Cálculo de las diferencias de imágenes:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="btn_quitarimg">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #174b98; /* Color de fondo */
+    border: 2px solid #3cb1e3; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #164b98; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}</string>
+           </property>
+           <property name="text">
+            <string>Quitar imagen</string>
+           </property>
+          </widget>
+         </item>
          <item row="1" column="0">
           <widget class="QListView" name="list_img">
            <property name="minimumSize">
             <size>
              <width>0</width>
              <height>50</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>80</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -555,41 +514,7 @@ QListView::item:hover {
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
-          <widget class="QPushButton" name="btn_quitarimg">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="cursor">
-            <cursorShape>PointingHandCursor</cursorShape>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">/* Estilo para botones de acción */
-QPushButton {
-    background-color: #FFD54F; /* Color de fondo */
-    border: 2px solid #FFD54F; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-    color: #000000; /* Color del texto */
-    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
-	font: 8pt &quot;Verdana&quot;;
-}
-
-/* Estilo para botones de acción al pasar el mouse */
-QPushButton:hover {
-    background-color: #FFA000; /* Color de fondo al pasar el mouse */
-    border: 2px solid #FFA000; /* Borde al pasar el mouse */
-    color: #000; /* Color del texto al pasar el mouse */
-}</string>
-           </property>
-           <property name="text">
-            <string>Quitar imagen</string>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="0">
+         <item row="20" column="0">
           <widget class="QLabel" name="label_11">
            <property name="styleSheet">
             <string notr="true">color: rgb(0, 0, 0);
@@ -597,6 +522,90 @@ font: 8pt &quot;Verdana&quot;;</string>
            </property>
            <property name="text">
             <string>Umbral</string>
+           </property>
+          </widget>
+         </item>
+         <item row="14" column="0">
+          <widget class="QLabel" name="label_21">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Distancia referenciada al plano (cm):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="15" column="0">
+          <widget class="QLineEdit" name="lineEdit_distancia_plano">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>120</string>
+           </property>
+          </widget>
+         </item>
+         <item row="17" column="0">
+          <widget class="QLineEdit" name="lineEdit_distancis_ccd">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>10</string>
+           </property>
+          </widget>
+         </item>
+         <item row="19" column="0">
+          <widget class="QLineEdit" name="lineEdit_periodo">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF; /* Color de fondo */
+    border: 2px solid #CCCCCC; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px; /* Espaciado interno */
+    color: #000000; /* Color del texto */
+	font: 8pt &quot;Verdana&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>100</string>
+           </property>
+          </widget>
+         </item>
+         <item row="18" column="0">
+          <widget class="QLabel" name="label_23">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Periodo</string>
+           </property>
+          </widget>
+         </item>
+         <item row="16" column="0">
+          <widget class="QLabel" name="label_22">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Distancia hacia el CCD Proyector (cm):</string>
            </property>
           </widget>
          </item>
@@ -643,7 +652,7 @@ font: 8pt &quot;Verdana&quot;;</string>
 font: 10pt &quot;Verdana&quot;;</string>
            </property>
            <property name="text">
-            <string>v1.0.0</string>
+            <string>v2.0.0</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -683,22 +692,673 @@ font: 15pt &quot;Verdana&quot;;</string>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout">
-              <item>
-               <widget class="QLabel" name="img_graficos">
-                <property name="text">
-                 <string/>
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="0" column="0" colspan="2">
+               <widget class="QWidget" name="widget_12" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>300</height>
+                 </size>
                 </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>300</height>
+                 </size>
                 </property>
+                <layout class="QGridLayout" name="gridLayout_10">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item row="0" column="0">
+                  <layout class="QGridLayout" name="gridLayout_9">
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QWidget" name="w_drop1" native="true">
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <property name="acceptDrops">
+                      <bool>false</bool>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_22">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_3">
+                        <item>
+                         <widget class="QLabel" name="lbl_def1">
+                          <property name="styleSheet">
+                           <string notr="true">border: 1px solid #000; /* Borde al pasar el mouse */
+color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string>Arrastra def1</string>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="def1">
+                          <property name="styleSheet">
+                           <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #174b98; /* Color de fondo */
+    border: 2px solid #3cb1e3; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #164b98; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Escoger imagen</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QWidget" name="w_drop3" native="true">
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_24">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_20">
+                        <item>
+                         <widget class="QLabel" name="lbl_def3">
+                          <property name="styleSheet">
+                           <string notr="true">border: 1px solid #000; /* Borde al pasar el mouse */
+color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string>Arrastra def3</string>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="def3">
+                          <property name="styleSheet">
+                           <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #174b98; /* Color de fondo */
+    border: 2px solid #3cb1e3; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #164b98; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Escoger imagen</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QWidget" name="w_drop4" native="true">
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_25">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_21">
+                        <item>
+                         <widget class="QLabel" name="lbl_def4">
+                          <property name="styleSheet">
+                           <string notr="true">border: 1px solid #000; /* Borde al pasar el mouse */
+color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string>Arrastra def4</string>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="def4">
+                          <property name="styleSheet">
+                           <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #174b98; /* Color de fondo */
+    border: 2px solid #3cb1e3; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #164b98; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Escoger imagen</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QWidget" name="w_drop2" native="true">
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_23">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_19">
+                        <item>
+                         <widget class="QLabel" name="lbl_def2">
+                          <property name="styleSheet">
+                           <string notr="true">border: 1px solid #000; /* Borde al pasar el mouse */
+color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string>Arrastra def2</string>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="def2">
+                          <property name="styleSheet">
+                           <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #174b98; /* Color de fondo */
+    border: 2px solid #3cb1e3; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #164b98; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Escoger imagen</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QWidget" name="w_drop5" native="true">
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_35">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_31">
+                        <item>
+                         <widget class="QLabel" name="lbl_ref1">
+                          <property name="styleSheet">
+                           <string notr="true">border: 1px solid #000; /* Borde al pasar el mouse */
+color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string>Arrastra ref1</string>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="ref1">
+                          <property name="styleSheet">
+                           <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #174b98; /* Color de fondo */
+    border: 2px solid #3cb1e3; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #164b98; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Escoger imagen</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QWidget" name="w_drop6" native="true">
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_36">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_32">
+                        <item>
+                         <widget class="QLabel" name="lbl_ref2">
+                          <property name="styleSheet">
+                           <string notr="true">border: 1px solid #000; /* Borde al pasar el mouse */
+color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string>Arrastra ref2</string>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="ref2">
+                          <property name="styleSheet">
+                           <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #174b98; /* Color de fondo */
+    border: 2px solid #3cb1e3; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #164b98; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Escoger imagen</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
+                    <widget class="QWidget" name="w_drop7" native="true">
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_37">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_33">
+                        <item>
+                         <widget class="QLabel" name="lbl_ref3">
+                          <property name="styleSheet">
+                           <string notr="true">border: 1px solid #000; /* Borde al pasar el mouse */
+color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string>Arrastra ref3</string>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="ref3">
+                          <property name="styleSheet">
+                           <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #174b98; /* Color de fondo */
+    border: 2px solid #3cb1e3; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #164b98; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Escoger imagen</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="1" column="3">
+                    <widget class="QWidget" name="w_drop8" native="true">
+                     <property name="maximumSize">
+                      <size>
+                       <width>400</width>
+                       <height>200</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_38">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>5</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_34">
+                        <item>
+                         <widget class="QLabel" name="lbl_ref4">
+                          <property name="styleSheet">
+                           <string notr="true">border: 1px solid #000; /* Borde al pasar el mouse */
+color: rgb(0, 0, 0);
+font: 8pt &quot;Verdana&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string>Arrastra ref4</string>
+                          </property>
+                          <property name="scaledContents">
+                           <bool>true</bool>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="ref4">
+                          <property name="styleSheet">
+                           <string notr="true">/* Estilo para botones de acción */
+QPushButton {
+    background-color: #174b98; /* Color de fondo */
+    border: 2px solid #3cb1e3; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno (vertical horizontal) */
+	font: 8pt &quot;Verdana&quot;;
+}
+
+/* Estilo para botones de acción al pasar el mouse */
+QPushButton:hover {
+    background-color: #164b98; /* Color de fondo al pasar el mouse */
+    border: 2px solid #FFA000; /* Borde al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Escoger imagen</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
                </widget>
               </item>
-              <item>
-               <widget class="QWidget" name="widget" native="true">
-                <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item row="1" column="0" colspan="2">
+               <widget class="QWidget" name="widget_2" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
                  <item>
-                  <layout class="QVBoxLayout" name="layoutv"/>
+                  <layout class="QGridLayout" name="gridLayout">
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="img_graficos">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>350</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>350</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </item>
                 </layout>
                </widget>
@@ -716,13 +1376,13 @@ font: 15pt &quot;Verdana&quot;;</string>
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>100</height>
+          <height>50</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>16777215</width>
-          <height>100</height>
+          <height>50</height>
          </size>
         </property>
         <property name="styleSheet">
@@ -756,38 +1416,11 @@ font: 15pt &quot;Verdana&quot;;</string>
             <number>10</number>
            </property>
            <item>
-            <widget class="QPushButton" name="btn_cargar_img">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>80</height>
-              </size>
-             </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton{
-    color: rgb(255, 255, 255);
-	background-color: #0D47A1;
-	font: 75 14pt &quot;Verdana&quot;;
-}	
-
-QPushButton:hover {
-    background-color: #0D3B76; /* Color de fondo al pasar el mouse */
-}	</string>
-             </property>
-             <property name="text">
-              <string>Cargar imagen</string>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QPushButton" name="btn_procesar_img">
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>80</height>
+               <height>40</height>
               </size>
              </property>
              <property name="cursor">
@@ -810,11 +1443,119 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
+            <widget class="QPushButton" name="mostrar_grafico3D">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+    color: rgb(255, 255, 255);
+	background-color: #0D47A1;
+	font: 75 14pt &quot;Verdana&quot;;
+}	
+
+QPushButton:hover {
+    background-color: #0D3B76; /* Color de fondo al pasar el mouse */
+}	</string>
+             </property>
+             <property name="text">
+              <string>Mostrar gráfica 3D</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_show_graphs">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+    color: rgb(255, 255, 255);
+	background-color: #0D47A1;
+	font: 75 14pt &quot;Verdana&quot;;
+}	
+
+QPushButton:hover {
+    background-color: #0D3B76; /* Color de fondo al pasar el mouse */
+}	</string>
+             </property>
+             <property name="text">
+              <string>Mostrar Graficos</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_exportar_imagen">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+    color: rgb(255, 255, 255);
+	background-color: #0D47A1;
+	font: 75 14pt &quot;Verdana&quot;;
+}	
+
+QPushButton:hover {
+    background-color: #0D3B76; /* Color de fondo al pasar el mouse */
+}	</string>
+             </property>
+             <property name="text">
+              <string>Descargar imagen</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_exportar_txt">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+    color: rgb(255, 255, 255);
+	background-color: #0D47A1;
+	font: 75 14pt &quot;Verdana&quot;;
+}	
+
+QPushButton:hover {
+    background-color: #0D3B76; /* Color de fondo al pasar el mouse */
+}	</string>
+             </property>
+             <property name="text">
+              <string>Exportar .txt</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QPushButton" name="btn_limpiar_area">
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>80</height>
+               <height>40</height>
               </size>
              </property>
              <property name="cursor">
